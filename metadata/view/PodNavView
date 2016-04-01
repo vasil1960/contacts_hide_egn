@@ -1,0 +1,32 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultBackButtonText": "РДГ",
+        "designer|userAlias": "podnavview",
+        "designer|userClassName": "PodNavView",
+        "id": "PodNav"
+    },
+    "name": "MyNavigationView",
+    "designerId": "d7210567-c6c9-41d6-bb1b-27ae8d6b892b",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Поделения на ИАГ"
+            },
+            "name": "podlist",
+            "designerId": "b36bf6b8-6bcb-45e0-8cd4-b6a484836ecc",
+            "masterInstanceId": "90aa03b3-37fb-4e55-99e7-6eac166dfd18"
+        }
+    ]
+}

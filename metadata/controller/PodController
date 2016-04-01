@@ -1,0 +1,181 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "podcontroller",
+        "designer|userClassName": "PodController"
+    },
+    "name": "MyController",
+    "designerId": "7cde9594-7ccf-4058-90ea-34acace3fc43",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "podnavview",
+                "selector": "podnavview"
+            },
+            "name": "podnavview",
+            "designerId": "fc60b2d1-aca4-414f-b924-76d057d19f4a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "podlist",
+                "selector": "podlist"
+            },
+            "name": "podlist",
+            "designerId": "00ad6d1d-de97-4d09-8786-826b966e3910"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "podlist",
+                "designer|targetType": "PodList",
+                "fn": "onPodListItemTap",
+                "implHandler": [
+                    "",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Моля, изчакайте ...', indicator:true});",
+                    "",
+                    "        var title = record.get('Pod_NameBg');",
+                    "        var glavpod = record.get('Pod_Id');",
+                    "",
+                    "        var store = Ext.getStore('PodSubJsonPStore',{",
+                    "            autoLoad:false",
+                    "        });",
+                    "        store.load(",
+                    "            {",
+                    "                params: {",
+                    "                    glavpod: glavpod",
+                    "                },",
+                    "",
+                    "                callback: function(records, operation, success) {",
+                    "",
+                    "                    if(success)",
+                    "                    {",
+                    "                        Ext.Viewport.setMasked(false);",
+                    "                        this.getPodnavview().push({",
+                    "                            xtype:'podsublist',",
+                    "                            title: title",
+                    "                        });",
+                    "                      ",
+                    "                    }",
+                    "                    else",
+                    "                    {",
+                    "                        Ext.Viewport.setMasked(false);",
+                    "                        Ext.Msg.alert('Събщение', 'Няма регистрирана такова лице.', Ext.emptyFn);",
+                    "                    }",
+                    "                },",
+                    "                scope: this",
+                    "            });",
+                    "",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onPodListItemTap",
+            "designerId": "282d352e-e8fb-468b-b2f2-0341ea523407"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "podsublist",
+                "selector": "podsublist"
+            },
+            "name": "podsublist",
+            "designerId": "021fceb9-6e62-4ba4-9326-90d22a91d735"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "podsublist",
+                "designer|targetType": "PodSubList",
+                "fn": "onPodSubListItemTap",
+                "implHandler": [
+                    "",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Моля, изчакайте ...', indicator:true});",
+                    "",
+                    "var podid = record.get('Pod_Id');",
+                    "var podname = record.get('Pod_NameBg');",
+                    "",
+                    "",
+                    "var store = Ext.getStore('PodUserJsonPStore',{",
+                    "    autoLoad:false",
+                    "});",
+                    "store.load(",
+                    "    {",
+                    "        params: {",
+                    "            podid: podid",
+                    "        },",
+                    "",
+                    "        callback: function(records, operation, success) {",
+                    "",
+                    "            if(success)",
+                    "            {",
+                    "                Ext.Viewport.setMasked(false);",
+                    "                this.getPodnavview().push({",
+                    "                    xtype:'poduserlist',",
+                    "                    title: podname",
+                    "                });",
+                    "                console.log('success');",
+                    "            }",
+                    "            else",
+                    "            {",
+                    "                Ext.Viewport.setMasked(false);",
+                    "                Ext.Msg.alert('Събщение', 'Няма регистрирана такова лице.', Ext.emptyFn);",
+                    "                console.log('unsuccess');",
+                    "            }",
+                    "        },",
+                    "        scope: this",
+                    "    });",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onPodSubListItemTap",
+            "designerId": "602cc6c8-db82-4db3-89ff-8a66780a88ed"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "poduserlist",
+                "selector": "poduserlist"
+            },
+            "name": "poduserlist",
+            "designerId": "09cc6222-62a9-4565-835c-2f442ff74aa6"
+        }
+    ]
+}

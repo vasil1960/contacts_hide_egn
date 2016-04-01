@@ -1,0 +1,36 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "podsublist",
+        "designer|userClassName": "PodSubList",
+        "emptyText": "Няма данни",
+        "id": "PodSubList",
+        "onItemDisclosure": true,
+        "store": "PodSubJsonPStore"
+    },
+    "name": "MyList",
+    "designerId": "1371cdd7-3771-42b9-9040-211deb3b8400",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{Pod_NameBg}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "ea22d4e7-c6fe-4cf3-94b9-474e0afdb6ad"
+        }
+    ]
+}

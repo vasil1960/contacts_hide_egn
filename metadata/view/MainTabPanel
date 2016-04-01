@@ -1,0 +1,216 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": null,
+        "designer|initialView": true,
+        "designer|userAlias": "maintabpanel",
+        "designer|userClassName": "MainTabPanel",
+        "requires": [
+            "Ext.MessageBox",
+            "Ext.tab.Bar",
+            "Contacts.view.HomePanel",
+            "Contacts.view.SearchNavView",
+            "Contacts.view.IagNavView",
+            "Contacts.view.RdgNavView",
+            "Ext.LoadMask",
+            "Contacts.view.AboutPanel"
+        ]
+    },
+    "name": "MyTabPanel",
+    "configAlternates": {
+        "hideAnimation": "object"
+    },
+    "designerId": "7a1e0a52-ca08-44e6-a927-af3d94f0b9cf",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "itemId": "mytabbar"
+            },
+            "name": "MyTabBar",
+            "designerId": "a06812fe-535e-45b5-82eb-b8824666e287"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "home",
+                "itemId": "homepanel",
+                "title": "Начало"
+            },
+            "name": "homepanel",
+            "designerId": "2c74dab3-dafd-4935-8368-49a485629860",
+            "masterInstanceId": "3c17862f-1792-4709-a6c3-c0ffaec2e517"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "team",
+                "id": null,
+                "itemId": "iagnavview",
+                "title": "ИАГ"
+            },
+            "name": "iagnavview",
+            "designerId": "34b18089-9423-4c14-98e8-efbdf1132207",
+            "masterInstanceId": "d44471af-bed4-4fa2-b5de-23ee5ddc8b5e",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onNavigationviewActivate",
+                        "implHandler": [
+                            "this.loadStore('IagJsonPStore');"
+                        ],
+                        "name": "activate"
+                    },
+                    "name": "onNavigationviewActivate",
+                    "designerId": "03479709-dd2b-46f2-b6c3-364709413208"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "team",
+                "itemId": "rdgnavview",
+                "title": "РДГ"
+            },
+            "name": "rdgnavview",
+            "designerId": "0d5b4f7f-dee1-4432-9d71-a05c06a91a9c",
+            "masterInstanceId": "aabe069e-7825-48a2-bff0-01e56fa2478d",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onNavigationviewActivate1",
+                        "implHandler": [
+                            "this.loadStore('PodJsonPStore');"
+                        ],
+                        "name": "activate"
+                    },
+                    "name": "onNavigationviewActivate1",
+                    "designerId": "f7af78dc-0b99-4129-8589-a737cc865fd3"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "team",
+                "itemId": "podnavview1",
+                "title": "Поделения"
+            },
+            "name": "podnavview",
+            "designerId": "24f0bed7-e62e-423e-a7b2-8289bf47f500",
+            "masterInstanceId": "d7210567-c6c9-41d6-bb1b-27ae8d6b892b",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPodNavActivate",
+                        "implHandler": [
+                            "this.loadStore('PodJsonPStore');"
+                        ],
+                        "name": "activate"
+                    },
+                    "name": "onPodNavActivate",
+                    "designerId": "c265d1cf-befb-446f-9536-1a43a0d48302"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "search",
+                "title": "Търсене"
+            },
+            "name": "searchnavview",
+            "designerId": "62d394a0-9385-4303-adc2-6c132392a146",
+            "masterInstanceId": "157e5b7d-d9ed-4a6b-93df-10e8e10d89a2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store"
+                ],
+                "fn": "loadStore",
+                "implHandler": [
+                    "console.log('Hello');",
+                    "",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Зареждам ...', indicator:true});",
+                    "        Ext.getStore(store).load({",
+                    "            callback: function(records, operation, success) {",
+                    "                if(success)",
+                    "                {",
+                    "                    Ext.Viewport.setMasked(false);",
+                    "                    ",
+                    "                    console.log('success');",
+                    "                } else {",
+                    "                    Ext.Viewport.setMasked(false);",
+                    "                    Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "                }",
+                    "            }",
+                    "        });"
+                ]
+            },
+            "name": "loadStore",
+            "designerId": "82a7ea3b-e2f5-4eef-ade9-742ea9a62765"
+        }
+    ]
+}

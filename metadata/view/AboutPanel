@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "anoutpanel",
+        "designer|userClassName": "AboutPanel"
+    },
+    "name": "MyPanel",
+    "designerId": "b966fbea-9f21-4445-a0fc-89d649a76097"
+}

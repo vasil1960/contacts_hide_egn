@@ -1,0 +1,187 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "main",
+        "designer|userClassName": "Main",
+        "layout": null,
+        "requires": [
+            "Ext.Menu"
+        ]
+    },
+    "name": "MyContainer",
+    "designerId": "da7fe6ca-1064-4fea-ad80-6681ba9f34c2",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Телефонен у-тел"
+            },
+            "name": "MyToolbar",
+            "designerId": "e6d5073f-b5dd-4da9-a914-2919c8e0cb0e",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "iconCls": "list",
+                        "text": null,
+                        "ui": "plain"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "e9ebf8e7-89cd-484b-9b63-64eb9db660fb",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "if(Ext.Viewport.getMenus().left.isHidden()){",
+                                    "                                Ext.Viewport.showMenu('left');",
+                                    "                            }",
+                                    "                            else",
+                                    "                            {",
+                                    "                                Ext.Viewport.hideMenu('left');",
+                                    "                            }"
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "a0dbd1c0-069b-40a1-803e-caa4090694ff"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "Ext.Viewport.setMenu(this.createMenu(),{",
+                    "                    side: 'left',",
+                    "                    reveal: false",
+                    "                });"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "de52249d-df28-41f0-b274-48a1947e5533"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "createMenu",
+                "implHandler": [
+                    "var items = [",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'Начало',",
+                    "                iconCls: 'home',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnHome'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'Служители в ИАГ',",
+                    "                iconCls: 'team',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnIag'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'Служители в РДГ',",
+                    "                iconCls: 'team',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnRdg'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'Служители в МЗХ </br> (РДГ, ДГС и др.)',",
+                    "                iconCls: 'team',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnPodelenia'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'Търсене по име',",
+                    "                iconCls: 'search',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnSearchByName'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'Търсене по номер',",
+                    "                iconCls: 'search',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnSearchByNumber'",
+                    "            },",
+                    "            {",
+                    "                xtype: 'button',",
+                    "                text: 'За приложението',",
+                    "                iconCls: 'user',",
+                    "                cls: 'menu-button',",
+                    "                id: 'btnAbout'",
+                    "            }",
+                    "        ];",
+                    "",
+                    "return Ext.create('Ext.Menu', {",
+                    "            style: 'padding: 50 0 20 0',",
+                    "            id: 'menu',",
+                    "            width: 280,",
+                    "            scrollable: 'vertical',",
+                    "            items: items",
+                    "        });"
+                ]
+            },
+            "name": "createMenu",
+            "designerId": "70c77a8e-7a9a-433f-bd2c-6a487fd6f347"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 517,
+                "src": "resources/images/home.png"
+            },
+            "name": "MyImg4",
+            "designerId": "d02de700-f4f6-4a9e-9391-2e00363a85bb"
+        }
+    ]
+}

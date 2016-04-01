@@ -1,0 +1,98 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdgcontroller",
+        "designer|userClassName": "RdgController"
+    },
+    "name": "MyController",
+    "designerId": "fb7ef09e-f476-4560-9f96-826d60b5d382",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdglist",
+                "selector": "rdglist"
+            },
+            "name": "rdglist",
+            "designerId": "1ed9b72c-33bd-4444-8a87-cfdd87586593"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdglist",
+                "designer|targetType": "RdgList",
+                "fn": "onRdgListItemTap",
+                "implHandler": [
+                    " ",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Моля, изчакайте ...', indicator:true});",
+                    "",
+                    "var podid = record.get('Pod_Id');",
+                    "var podname = record.get('Pod_NameBg');",
+                    "",
+                    "var store = Ext.getStore('PodUserJsonPStore',{",
+                    "    autoLoad:false",
+                    "});",
+                    "store.load(",
+                    "    {",
+                    "        params: {",
+                    "            podid: podid",
+                    "        },",
+                    "",
+                    "        callback: function(records, operation, success) {",
+                    "",
+                    "            if(success)",
+                    "            {",
+                    "                Ext.Viewport.setMasked(false);",
+                    "                this.getRdgnavview().push({",
+                    "                    xtype:'poduserlist',",
+                    "                    title: podname",
+                    "                });",
+                    "                console.log('success');",
+                    "            }",
+                    "            else",
+                    "            {",
+                    "                Ext.Viewport.setMasked(false);",
+                    "                Ext.Msg.alert('Събщение', 'Няма регистрирана такова лице.', Ext.emptyFn);",
+                    "                console.log('unsuccess');",
+                    "            }",
+                    "        },",
+                    "        scope: this",
+                    "    });",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgListItemTap",
+            "designerId": "afa3b22f-6d15-4f5b-b8b2-270e65e62c8d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgnavview",
+                "selector": "rdgnavview"
+            },
+            "name": "rdgnavview",
+            "designerId": "182bcce9-2162-4edf-91bd-2c62ce33e9c2"
+        }
+    ]
+}

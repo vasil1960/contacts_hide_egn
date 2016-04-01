@@ -1,0 +1,43 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "detailcardjsonpstore",
+        "designer|userClassName": "DetailCardJsonPStore",
+        "model": "UserModel",
+        "storeId": "DetailCardJsonPStore"
+    },
+    "name": "IagJsonPStore1",
+    "designerId": "a8bbaf7b-70b7-4754-8e5b-f89ed57a54b1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://system.iag.bg/iagSys/resources/php/detailcardusers.php"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "866c76b4-25c4-4d38-9e67-8757fff53a51",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader",
+                    "designerId": "2ec29e26-57af-4bbd-8c86-b751820329f2"
+                }
+            ]
+        }
+    ]
+}

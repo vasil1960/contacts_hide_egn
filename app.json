@@ -1,0 +1,72 @@
+{
+   "builds": {
+      "web": {
+         "default": true
+      },
+      "native": {
+         "packager": "cordova",
+         "cordova": {
+            "config": {
+               "id": "com.domain.Contacts",
+               "name": "Contacts",
+               "platforms": "android"
+            }
+         }
+      }
+   },
+   "name": "Contacts",
+   "indexHtmlPath": "index.html",
+   "framework": "touch",
+   "url": null,
+   "js": [
+      {
+         "path": "touch/sencha-touch.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "bootstrap.js",
+         "x-bootstrap": true
+      },
+      {
+         "path": "app.js",
+         "bundle": true,
+         "update": "delta"
+      }
+   ],
+   "css": [
+      {
+         "update": "delta",
+         "platform": [
+            "phone",
+            "tablet",
+            "desktop"
+         ],
+         "theme": "Default",
+         "path": "resources/css/sencha-touch-b3867f21-9169-4a28-b4b7-5ebb849bcb3e.css"
+      }
+   ],
+   "appCache": {
+      "cache": [
+         "index.html"
+      ],
+      "network": [
+         "*"
+      ],
+      "fallback": []
+   },
+   "resources": [
+      "resources/images",
+      "resources/icons",
+      "resources/startup"
+   ],
+   "ignore": [
+      ".svn$"
+   ],
+   "archivePath": "archive",
+   "requires": [],
+   "cache": {
+      "enable": true,
+      "deltas": "deltas"
+   },
+   "id": "055ca5e2-5438-409c-94cb-75ce36ff40ac"
+}

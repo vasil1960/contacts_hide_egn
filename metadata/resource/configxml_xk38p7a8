@@ -1,0 +1,14 @@
+{
+    "type": "configxmlresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "configxml_xk38p7a8",
+        "url": "cordova/config.xml"
+    },
+    "name": "configxml8",
+    "designerId": "ac6171c5-2917-485f-9624-7944e6e13c1e"
+}

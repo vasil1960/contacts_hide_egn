@@ -1,0 +1,71 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "menucontroller",
+        "designer|userClassName": "MenuController"
+    },
+    "name": "MyController",
+    "designerId": "e0de98da-b0a7-497d-a9ef-5c4078e18832",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "menupanel",
+                "selector": "menupanel"
+            },
+            "name": "menupanel",
+            "designerId": "0f8a7b68-dd56-4203-a535-f4dfddd0807c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "menupanel",
+                "designer|targetType": "MenuPanel",
+                "fn": "onPanelActivate",
+                "implHandler": [
+                    "var menu = Ext.create('Ext.Menu', {",
+                    "     items: [",
+                    "         {",
+                    "             text: 'Служители в ИАГ',",
+                    "             iconCls: 'user'",
+                    "         },",
+                    "         {",
+                    "             text: 'Служители в РДГ',",
+                    "             iconCls: 'team'",
+                    "         },",
+                    "         {",
+                    "             text: '<p>Служители в Поделения</p><p> на ИАГ и МЗХ</p>',",
+                    "             iconCls: 'star'",
+                    "         }",
+                    "     ]",
+                    " });",
+                    "",
+                    " Ext.Viewport.setMenu(menu, {",
+                    "     side: 'top',",
+                    "     reveal: true",
+                    " });",
+                    "",
+                    " Ext.Viewport.toggleMenu('top');"
+                ],
+                "name": "activate"
+            },
+            "name": "onPanelActivate",
+            "designerId": "2efc7d20-242d-4aac-af78-f33d24fc5112"
+        }
+    ]
+}

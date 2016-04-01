@@ -1,0 +1,122 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "callmenucontroller",
+        "designer|userClassName": "CallMenuController"
+    },
+    "name": "MyController",
+    "designerId": "36d180df-2a5b-4c40-86a0-ad8102ce1e7d",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnHome",
+                "selector": "#btnHome"
+            },
+            "name": "btnHome",
+            "designerId": "882d0c63-7c23-43f7-b639-16f6e9196c88"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnIag",
+                "selector": "#btnIag"
+            },
+            "name": "btnIag",
+            "designerId": "fc110628-11d0-4bc9-9494-32847ab9c966"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "btnHome",
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeButtonTap",
+                "implHandler": [
+                    "console.log('Tab btnHome');",
+                    "Ext.Viewport.hideMenu('left');",
+                    "Ext.Viewport.animateActiveItem(Ext.create('Contacts.view.HomePanel'),{type:'flip',duration: 400});"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeButtonTap",
+            "designerId": "bccb5f2a-efb2-4c51-a2e6-62d22de0251e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "btnIag",
+                "designer|targetType": "Ext.Button",
+                "fn": "onIagButtonTap",
+                "implHandler": [
+                    "console.log('Tab btnHome');",
+                    "this.loadStore('IagJsonPStore', 'Contacts.view.IagNavView');"
+                ],
+                "name": "tap"
+            },
+            "name": "onIagButtonTap",
+            "designerId": "09023900-b4f3-4813-a490-871381cd2d7b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "view"
+                ],
+                "fn": "loadStore",
+                "implHandler": [
+                    "console.log('Hello');",
+                    "",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Зареждам ...', indicator:true});",
+                    "        Ext.getStore(store).load({",
+                    "            callback: function(records, operation, success) {",
+                    "                if(success)",
+                    "                {",
+                    "                    Ext.Viewport.setMasked(false);",
+                    "                    Ext.Viewport.hideMenu('left');",
+                    "                    Ext.Viewport.animateActiveItem(Ext.create(view),{type:'flip',duration: 400});",
+                    "",
+                    "                    console.log('success');",
+                    "                } else {",
+                    "                    Ext.Viewport.setMasked(false);",
+                    "                    Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "                }",
+                    "            }",
+                    "        });"
+                ]
+            },
+            "name": "loadStore",
+            "designerId": "9097c782-1de5-4d48-9150-1eda6454ad4c"
+        }
+    ]
+}

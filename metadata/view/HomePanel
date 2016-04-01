@@ -1,0 +1,47 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "homepanel",
+        "designer|userClassName": "HomePanel"
+    },
+    "name": "MyPanel",
+    "designerId": "3c17862f-1792-4709-a6c3-c0ffaec2e517",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Телефонен указател (ИАГ)"
+            },
+            "name": "MyTitleBar1",
+            "designerId": "61e4be28-0ffb-499d-8a30-e3fb065fefc5"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 519,
+                "hidden": false,
+                "padding": null,
+                "src": "resources/images/home.png"
+            },
+            "name": "MyImg",
+            "designerId": "02ae9660-a90e-4c56-9563-b34e6051e610"
+        }
+    ]
+}

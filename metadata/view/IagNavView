@@ -1,0 +1,30 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "iagnavview",
+        "designer|userClassName": "IagNavView"
+    },
+    "name": "MyNavigationView",
+    "designerId": "d44471af-bed4-4fa2-b5de-23ee5ddc8b5e",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Служители в ИАГ"
+            },
+            "name": "iaguserlist",
+            "designerId": "1d3ab03b-6a2b-40d1-acf6-e28483859c62",
+            "masterInstanceId": "a08aa1c5-385f-48cb-8815-f2bc22c5c0c5"
+        }
+    ]
+}

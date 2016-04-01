@@ -1,0 +1,31 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultBackButtonText": "Обратно",
+        "designer|userAlias": "searchnavview",
+        "designer|userClassName": "SearchNavView"
+    },
+    "name": "MyNavigationView",
+    "designerId": "157e5b7d-d9ed-4a6b-93df-10e8e10d89a2",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Търсене в базат с данни"
+            },
+            "name": "searchformpanel",
+            "designerId": "505f3803-91c7-4f69-a23f-364ef9f010a4",
+            "masterInstanceId": "9cff690f-ede2-4b37-b09a-834a89c04e5e"
+        }
+    ]
+}

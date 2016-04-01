@@ -1,0 +1,62 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "searchformpanel",
+        "designer|userClassName": "SearchFormPanel",
+        "padding": "10px 30px"
+    },
+    "name": "MyFormPanel",
+    "designerId": "9cff690f-ede2-4b37-b09a-834a89c04e5e",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "instructions": "Въведете мин. първите 3 букви от името или първаите букви от името и фамилията с интервал между тях",
+                "title": "Търсене по име:"
+            },
+            "name": "MyFieldSet",
+            "designerId": "6fbd4236-c17b-4367-ad25-7e5a8fd61bbc",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtSearch",
+                        "label": "Име:"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "9a57e9b5-5522-442f-b4e0-339f4bd796db"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "search",
+                "id": "btnSearch",
+                "text": null
+            },
+            "name": "MyButton",
+            "designerId": "ef47cfce-a87d-43ca-882e-4c828f407939"
+        }
+    ]
+}

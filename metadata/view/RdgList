@@ -1,0 +1,36 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdglist",
+        "designer|userClassName": "RdgList",
+        "emptyText": "Няма данни",
+        "id": "RdgList",
+        "onItemDisclosure": true,
+        "store": "PodJsonPStore"
+    },
+    "name": "PodList2",
+    "designerId": "19590b73-2ce7-46f7-a374-9299cda9b544",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{Pod_NameBg}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "fedda991-ab61-439a-bd2f-34726410df72"
+        }
+    ]
+}

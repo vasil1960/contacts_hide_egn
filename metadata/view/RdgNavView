@@ -1,0 +1,31 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaultBackButtonText": "РДГ",
+        "designer|userAlias": "rdgnavview",
+        "designer|userClassName": "RdgNavView"
+    },
+    "name": "MyNavigationView",
+    "designerId": "aabe069e-7825-48a2-bff0-01e56fa2478d",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Регионални дирекции"
+            },
+            "name": "rdglist",
+            "designerId": "f006f210-207e-468a-9a20-cd61ba1272ab",
+            "masterInstanceId": "19590b73-2ce7-46f7-a374-9299cda9b544"
+        }
+    ]
+}

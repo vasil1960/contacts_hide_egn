@@ -1,0 +1,36 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "iaglist",
+        "designer|userClassName": "IagList",
+        "emptyText": "Няма данни",
+        "id": "IagList",
+        "store": "PodJsonPStore"
+    },
+    "name": "RdgList1",
+    "designerId": "ecd1b18a-4a40-496c-9575-3ee0455906de",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{Pod_NameBg}</div>",
+                    ""
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "9e808478-9dba-42a6-aa3d-569ade49d039"
+        }
+    ]
+}

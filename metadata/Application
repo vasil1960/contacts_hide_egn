@@ -1,0 +1,80 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "CallController",
+            "LoginController",
+            "MenuController",
+            "PodController",
+            "RdgController",
+            "SearchController",
+            "CallMenuController"
+        ],
+        "models": [
+            "LoginModel",
+            "PodModel",
+            "UserModel"
+        ],
+        "name": "Contacts",
+        "requires": [
+            "Ext.TitleBar"
+        ],
+        "stores": [
+            "IagJsonPStore",
+            "LoginStore",
+            "PodJsonPStore",
+            "PodSubJsonPStore",
+            "PodUserJsonPStore",
+            "SearchJsonPStore",
+            "DetailCardJsonPStore"
+        ],
+        "views": [
+            "HomePanel",
+            "IagList",
+            "IagNavView",
+            "IagUserList",
+            "LoginPanel",
+            "MainTabPanel",
+            "MenuPanel",
+            "NoConnectionPanel",
+            "PodList",
+            "PodNavView",
+            "PodSubList",
+            "PodUserList",
+            "RdgList",
+            "RdgNavView",
+            "SearchFormPanel",
+            "Main",
+            "AboutPanel"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "",
+                    "//Ext.getStore('IagJsonPStore').load();",
+                    "//Ext.getStore('PodJsonPStore').load();",
+                    "",
+                    ""
+                ]
+            },
+            "name": "launch",
+            "designerId": "1ea00129-e953-4d8c-a17f-15150b0668b2"
+        }
+    ]
+}

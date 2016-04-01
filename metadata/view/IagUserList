@@ -1,0 +1,34 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "iaguserlist",
+        "designer|userClassName": "IagUserList",
+        "emptyText": "Няма данни",
+        "store": "IagJsonPStore"
+    },
+    "name": "PodUserList1",
+    "designerId": "a08aa1c5-385f-48cb-8815-f2bc22c5c0c5",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "bf56583e-df87-4e53-ad16-912b282f4eb6"
+        }
+    ]
+}

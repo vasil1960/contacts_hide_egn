@@ -1,0 +1,107 @@
+{
+    "name": "contacts_hide_egn",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "6.1.1.76",
+            "frameworkVersion": "2.4.2.571"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost:1841",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": true,
+        "lastBuildSelection": {
+            "value": "emulate",
+            "display": "Native Build & Emulate"
+        }
+    },
+    "xdsVersion": "3.5.0",
+    "xdsBuild": 268,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "touch24",
+    "viewOrderMap": {
+        "view": [
+            "58bdc1f9-aaca-45f5-8423-25d4b942c947",
+            "b966fbea-9f21-4445-a0fc-89d649a76097",
+            "3c17862f-1792-4709-a6c3-c0ffaec2e517",
+            "ecd1b18a-4a40-496c-9575-3ee0455906de",
+            "d44471af-bed4-4fa2-b5de-23ee5ddc8b5e",
+            "a08aa1c5-385f-48cb-8815-f2bc22c5c0c5",
+            "6de3f760-77a8-4233-a077-9c684da507f7",
+            "da7fe6ca-1064-4fea-ad80-6681ba9f34c2",
+            "7a1e0a52-ca08-44e6-a927-af3d94f0b9cf",
+            "f0a1509d-fef7-459c-a4da-1ac5661f7398",
+            "67c58f9c-3925-4b55-8480-85c2c44eac31",
+            "90aa03b3-37fb-4e55-99e7-6eac166dfd18",
+            "d7210567-c6c9-41d6-bb1b-27ae8d6b892b",
+            "1371cdd7-3771-42b9-9040-211deb3b8400",
+            "8b24d30f-9db8-4d71-aec1-62c9d9211159",
+            "19590b73-2ce7-46f7-a374-9299cda9b544",
+            "aabe069e-7825-48a2-bff0-01e56fa2478d",
+            "9cff690f-ede2-4b37-b09a-834a89c04e5e",
+            "157e5b7d-d9ed-4a6b-93df-10e8e10d89a2",
+            "dfd9f0cf-6f52-4a7c-8fbf-eeea6342075f"
+        ],
+        "store": [
+            "a8bbaf7b-70b7-4754-8e5b-f89ed57a54b1",
+            "d8012c56-5883-4ab5-9f20-c801d1fded26",
+            "c5940d27-e20f-42ff-a6c8-f9652d26ca3d",
+            "cff6c52f-aea7-4bc4-b53e-b8b5a6fd592d",
+            "6d6763d3-5157-48ff-8a47-2bfb04c9dedb",
+            "34580d48-f47a-4b4a-8893-e49c1f186b46",
+            "4ed1e63f-20c6-4230-a29f-d6ffc3109a18"
+        ],
+        "controller": [
+            "31d758f2-11d6-4224-83fd-6461404547b1",
+            "36d180df-2a5b-4c40-86a0-ad8102ce1e7d",
+            "5ffc42b4-f4e1-4e55-a7e0-7c46c51ff66a",
+            "e0de98da-b0a7-497d-a9ef-5c4078e18832",
+            "7cde9594-7ccf-4058-90ea-34acace3fc43",
+            "fb7ef09e-f476-4560-9f96-826d60b5d382",
+            "0a9509fc-9064-4153-94b8-13582abe2f80"
+        ],
+        "model": [
+            "c2e0147e-907e-40f4-b9d9-5906df32fe43",
+            "f4d09a5d-cec2-4dad-aebd-3fc07e477c7f",
+            "f33fd77c-314c-4fb1-87df-9e51e4f998d4"
+        ],
+        "resource": [
+            "5d61aac5-98f6-4eda-a5fb-4d495fb96b82",
+            "b3867f21-9169-4a28-b4b7-5ebb849bcb3e",
+            "2d5668ef-c464-441e-bc00-ba48a611c5fe",
+            "378386a0-8dcf-4b08-9291-11f467d154a1",
+            "c1a6e84c-28df-4d1e-9d22-ae33182c58df",
+            "1f785ba3-d325-42af-a6c6-c87b16dfb88b",
+            "eeedad2b-5ce1-4937-bda2-89efa43532d3",
+            "6b1f222b-0dd5-4dea-a850-802ddb4e340b",
+            "5b22cd0d-0365-4a7f-943a-5f2ab0abfcc6",
+            "29ef2c4c-a110-408b-a4a2-5441554f8c3b",
+            "4128e0ff-ea7f-40bf-9312-418b3a178cc6",
+            "c9e42a17-82e6-4933-8e0e-3249e866c2fa",
+            "875a329b-5843-4bbe-b4a7-7b36d8141c0b",
+            "0a8e90eb-71d8-4292-8261-0383acc7d8d4",
+            "ac6171c5-2917-485f-9624-7944e6e13c1e",
+            "819a6be1-b0f6-4186-8927-aab6b3a55fe6",
+            "bba10f05-659d-49d0-937c-2adff69db222"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

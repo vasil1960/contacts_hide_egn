@@ -1,0 +1,356 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "callcontroller",
+        "designer|userClassName": "CallController"
+    },
+    "name": "MyController",
+    "designerId": "31d758f2-11d6-4224-83fd-6461404547b1",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "iaguserlist",
+                "selector": "iaguserlist",
+                "xtype": "iaguserlist"
+            },
+            "name": "iaguserlist",
+            "designerId": "bb0bfb66-8637-437d-b675-97cad598bf95"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "poduserlist",
+                "selector": "poduserlist",
+                "xtype": "poduserlist"
+            },
+            "name": "poduserlist",
+            "designerId": "10006054-f8c7-4dbb-8123-8a6f290e33ae"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "designer|displayName": null,
+                "ref": "searchresultuserlist",
+                "selector": "searchresultuserlist",
+                "xtype": "searchresultuserlist"
+            },
+            "name": "searchresultuserlist",
+            "designerId": "20b42f8d-9aae-4499-a014-eede78a6945b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iaguserlist",
+                "designer|targetType": "IagUserList",
+                "fn": "onIagListItemSingletap",
+                "implHandler": [
+                    "",
+                    "this.callAndEmailFn(record);"
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "onIagListItemSingletap",
+            "designerId": "3a6ec44e-b2d8-4557-844b-974da8323160"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "poduserlist",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onPodListItemSingletap",
+                "implHandler": [
+                    "",
+                    "this.callAndEmailFn(record);"
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "onPodListItemSingletap",
+            "designerId": "cebe3e47-c48c-43d8-95ff-55bc6ef04b50"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchresultuserlist",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onSearchResultListItemSingletap",
+                "implHandler": [
+                    "",
+                    "this.callAndEmailFn(record);"
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "onSearchResultListItemSingletap",
+            "designerId": "59321b35-cc0e-4789-9fbb-333398d0206a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "callAndEmailFn",
+                "implHandler": [
+                    "Ext.Viewport.setMasked(false);",
+                    "",
+                    "var gsm = record.get('GSM'),",
+                    "    email = record.get('Email'),",
+                    "    fullname = record.get('Titla') + ' ' + record.get('Name') + ' ' + record.get('Familia'),",
+                    "    pod = record.get('Podelenie'),",
+                    "    dlagnost = record.get('Dlagnost'),",
+                    "    EGN = record.get('EGN'),",
+                    "    sms = record.get('GSM');",
+                    "",
+                    "    //без ЕГН",
+                    "    text = '<P>' + dlagnost + '</p><p>' + pod + '</p><p>' + gsm + '</p><p>' + email + '</p>';",
+                    "",
+                    "    // с ЕГН",
+                    "    //text = '<P>ЕГН: ' + EGN + '</p><P>' + dlagnost + '</p><p>' + pod + '</p><p>' + gsm + '</p><p>' + email + '</p>';",
+                    "",
+                    "Ext.Msg.show({",
+                    "",
+                    "    title: fullname,",
+                    "    //message: this.changeMessageTextAndQuestion(gsm, email, text),",
+                    "    message: '',",
+                    "    width: 200,",
+                    "    ",
+                    "    buttons:[",
+                    "        { text: 'Избери', itemId: 'call', hidden: this.hideButton(gsm) },",
+                    "        { text: 'Email',  itemId: 'email', hidden: this.hideButton(email) },",
+                    "        { text: 'sms',  itemId: 'sms', hidden: this.hideButton(sms) },",
+                    "        { text: 'Затвори', itemId: 'cancel' }",
+                    "    ],",
+                    "",
+                    "    fn: function(buttonId) {",
+                    "",
+                    "        if (buttonId == 'call'){",
+                    "            document.location.href = 'tel:'+record.get('GSM');",
+                    "        } else if (buttonId == 'email'){",
+                    "            document.location.href = 'mailto:'+record.get('Email');",
+                    "        } else if (buttonId == 'sms'){",
+                    "            document.location.href = 'sms:'+record.get('GSM');",
+                    "            console.log('smsto:' + record.get('GSM'));",
+                    "        } else if (buttonId == 'cancel'){",
+                    "            //console.log('cancel');",
+                    "        } else {",
+                    "            alert('Има някакава грешка');",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "callAndEmailFn",
+            "designerId": "843fd927-c4fd-4884-b337-b2a2d34bfd30"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "param"
+                ],
+                "fn": "hideButton",
+                "implHandler": [
+                    "if (param === ''){",
+                    "    return true;",
+                    "} else {",
+                    "    return false;",
+                    "}"
+                ]
+            },
+            "name": "hideButton",
+            "designerId": "6be537bc-a006-4e3d-a2a4-b8b3b4f83f6c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gsm",
+                    "email",
+                    "text"
+                ],
+                "fn": "changeMessageTextAndQuestion",
+                "implHandler": [
+                    "",
+                    "if (gsm === '') {",
+                    "    return text + '<p>Няма въведен телефонен номер</p>';",
+                    "} else if ( (gsm === '') && (email === '')){",
+                    "    return text + '<p>Няма въведени телефонен номер и имейл</p>';",
+                    "} else if ( (gsm !== '') && (email === '')){",
+                    "    return text + '<p>Да избера ли номера ?</p>';",
+                    "} else if ( (gsm === '') && (email !== '')){",
+                    "    return text + '</p><p>Няма въведен телефон номер.</p><p>Можете да изпратите само имейл</p>';",
+                    "}else if ( (gsm !== '') && (email !== '')){",
+                    "    return text + '<p>Да избера ли номера или ще изпратите имейл ?</p>';",
+                    "} else {",
+                    "    alert('Има някаква грешка');",
+                    "}",
+                    ""
+                ]
+            },
+            "name": "changeMessageTextAndQuestion",
+            "designerId": "a4d71388-cc7c-4db1-afe7-c71d50ca8c8d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "callPhoneFn",
+                "implHandler": [
+                    "document.location.href = 'tel:'+record.get('GSM');"
+                ]
+            },
+            "name": "callPhoneFn",
+            "designerId": "11b9442a-c216-4938-a559-3cc2780c0dc7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iaguserlist",
+                "designer|targetType": "IagUserList",
+                "fn": "onListItemDoubletap",
+                "implHandler": [
+                    "this.showEgnFn(record);"
+                ],
+                "name": "itemdoubletap"
+            },
+            "name": "onListItemDoubletap",
+            "designerId": "4fa10cc5-ac7d-4ecd-ad93-8c422acceefd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "poduserlist",
+                "designer|targetType": "PodUserList",
+                "fn": "onPodUsrListItemDoubletap",
+                "implHandler": [
+                    "this.callPhoneFn(record);"
+                ],
+                "name": "itemdoubletap"
+            },
+            "name": "onPodUsrListItemDoubletap",
+            "designerId": "d0b72cf6-1ae7-4a27-9d41-b65cb4d0930a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchresultuserlist",
+                "designer|targetType": "SearchResultUserList",
+                "fn": "onSearchListItemDoubletap",
+                "implHandler": [
+                    "this.callPhoneFn(record);"
+                ],
+                "name": "itemdoubletap"
+            },
+            "name": "onSearchListItemDoubletap",
+            "designerId": "71cd518c-dfc7-4abc-aa15-17dbb70d1263"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "showEgnFn",
+                "implHandler": [
+                    "Ext.Viewport.setMasked(false);",
+                    "",
+                    " var   fullname = record.get('Titla') + ' ' + record.get('Name') + ' ' + record.get('Familia'),",
+                    "       EGN = record.get('EGN');",
+                    "",
+                    "",
+                    "Ext.Msg.show({",
+                    "",
+                    "    title: fullname,",
+                    "    message: 'ЕГН: ' + EGN,",
+                    "    width: 320,",
+                    "    buttons:[",
+                    "",
+                    "        { text: 'Затвори', itemId: 'cancel' }",
+                    "    ],",
+                    "",
+                    "});"
+                ]
+            },
+            "name": "showEgnFn",
+            "designerId": "4ae49cb4-e648-430e-a40e-1bb5203dd0cd"
+        }
+    ]
+}

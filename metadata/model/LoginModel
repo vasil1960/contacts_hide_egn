@@ -1,0 +1,83 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "loginmodel",
+        "designer|userClassName": "LoginModel"
+    },
+    "name": "MyModel",
+    "designerId": "c2e0147e-907e-40f4-b9d9-5906df32fe43",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field16",
+            "designerId": "f68001d7-7d89-4b4b-b5d5-037570235aff"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pass_sha"
+            },
+            "name": "field17",
+            "designerId": "19745609-dcca-4a16-bb8e-6df12342ffe0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Active"
+            },
+            "name": "field18",
+            "designerId": "45756bd8-a90c-4dfb-ac7d-8a173485eaa3"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "username"
+            },
+            "name": "MyPresenceValidation",
+            "designerId": "e9e19af4-b628-4b0b-91cf-8d45c27338d9"
+        },
+        {
+            "type": "lengthvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "username",
+                "max": 8,
+                "min": 3
+            },
+            "name": "MyLengthValidation",
+            "designerId": "80a20167-53af-442b-950f-cc7a3676fe9d"
+        }
+    ]
+}

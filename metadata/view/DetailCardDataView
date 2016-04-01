@@ -1,0 +1,33 @@
+{
+    "type": "Ext.dataview.DataView",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "detailcarddataview",
+        "designer|userClassName": "DetailCardDataView",
+        "store": "DetailCardJsonPStore"
+    },
+    "name": "MyDataView",
+    "designerId": "58bdc1f9-aaca-45f5-8423-25d4b942c947",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "e6c4dd6d-2c89-4c0c-bb77-32c45f120541"
+        }
+    ]
+}

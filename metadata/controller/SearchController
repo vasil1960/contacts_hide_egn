@@ -1,0 +1,114 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "searchcontroller",
+        "designer|userClassName": "SearchController"
+    },
+    "name": "MyController",
+    "designerId": "0a9509fc-9064-4153-94b8-13582abe2f80",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnsearch",
+                "selector": "#btnSearch"
+            },
+            "name": "btnsearch",
+            "designerId": "72919758-31e0-4ddb-bb26-852d2ae4fe99"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "btnsearch",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSearchButtonTap",
+                "implHandler": [
+                    "console.log('tap');",
+                    "",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Моля, изчакайте ...', indicator:true});",
+                    "",
+                    "var ime = Ext.getCmp('txtSearch').getValue();",
+                    "",
+                    "if (ime.length > 2)",
+                    "{",
+                    "    var arr = ime.split(\" \");",
+                    "",
+                    "    var Ime   = arr[0];",
+                    "    var Fam   = arr[1];",
+                    "",
+                    "    var store = Ext.getStore('SearchJsonPStore',{",
+                    "        autoLoad:false,",
+                    "        url:'https://system.iag.bg/iagSys/resources/php/users.php'",
+                    "    });",
+                    "    store.load(",
+                    "        {",
+                    "            params: {",
+                    "                Ime: Ime,",
+                    "                Fam: Fam",
+                    "            },",
+                    "",
+                    "            callback: function(records, operation, success) {",
+                    "",
+                    "                if(success)",
+                    "                {",
+                    "                    Ext.Viewport.setMasked(false);",
+                    "                    this.getSearchnavview().push({",
+                    "                        xtype:'searchresultuserlist',",
+                    "                        title: 'Списък'",
+                    "                    });",
+                    "                   ",
+                    "                }",
+                    "                else",
+                    "                {",
+                    "                    Ext.Viewport.setMasked(false);",
+                    "                    Ext.Msg.alert('Събщение', 'Няма регистрирана такова лице.', Ext.emptyFn);",
+                    "                   ",
+                    "                }",
+                    "            },",
+                    "            scope: this",
+                    "        });",
+                    "}",
+                    "else",
+                    "{",
+                    "    Ext.Msg.alert('Събщение', 'Некоректно търсене. Въведете минимум 3 букви, за да търсите по Име или 2 букви с интервал между тях за търсене по Име и Фамилия ', Ext.emptyFn);",
+                    "    Ext.Viewport.setMasked(false);",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onSearchButtonTap",
+            "designerId": "6c0c6560-1e40-4888-8088-583176c72bdc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchnavview",
+                "selector": "searchnavview"
+            },
+            "name": "searchnavview",
+            "designerId": "25d62d9e-60ce-40d6-bd38-5cb00467842f"
+        }
+    ]
+}

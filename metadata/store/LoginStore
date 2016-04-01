@@ -1,0 +1,43 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "loginstore",
+        "designer|userClassName": "LoginStore",
+        "model": "LoginModel",
+        "storeId": "LoginStore"
+    },
+    "name": "MyJsonPStore",
+    "designerId": "c5940d27-e20f-42ff-a6c8-f9652d26ca3d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://system.iag.bg/iagSys/resources/php/login.php"
+            },
+            "name": "MyJsonPProxy3",
+            "designerId": "36aa0398-1c4e-4655-a61c-012930c4ac27",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader3",
+                    "designerId": "dd803317-ba0f-4409-9013-c5182725c835"
+                }
+            ]
+        }
+    ]
+}

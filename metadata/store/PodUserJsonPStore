@@ -1,0 +1,42 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PodUserJsonPStore",
+        "model": "UserModel",
+        "storeId": "PodUserJsonPStore"
+    },
+    "name": "MyJsonPStore",
+    "designerId": "34580d48-f47a-4b4a-8893-e49c1f186b46",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://system.iag.bg/iagSys/resources/php/rdgusers.php"
+            },
+            "name": "MyJsonPProxy2",
+            "designerId": "b5dea775-bd73-4554-b213-de248594542d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader2",
+                    "designerId": "3b11125c-001c-40ea-8bd9-f21f5ff15e0c"
+                }
+            ]
+        }
+    ]
+}

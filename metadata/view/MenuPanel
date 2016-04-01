@@ -1,0 +1,17 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "menupanel",
+        "designer|userClassName": "MenuPanel",
+        "requires": [
+            "Ext.Menu"
+        ]
+    },
+    "name": "MyPanel",
+    "designerId": "f0a1509d-fef7-459c-a4da-1ac5661f7398"
+}
