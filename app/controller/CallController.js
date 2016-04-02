@@ -98,7 +98,7 @@ Ext.define('Contacts.controller.CallController', {
             title: fullname,
             //message: this.changeMessageTextAndQuestion(gsm, email, text),
             message: '',
-            width: 200,
+            //width: 500,
 
             buttons:[
                 { text: 'Избери', itemId: 'call', hidden: this.hideButton(gsm) },
